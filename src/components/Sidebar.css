@@ -1,0 +1,34 @@
+.sidebar-nav nav {
+    background-color: #15171c;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+ .nav-icon {
+    margin-left: 2rem;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebarNav{
+    background-color: #15171c;
+    width: 250px;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 350ms;
+    z-index: 10;
+}
+.sidebarNav.open{
+left: 0;
+}
+.sidebarWrap{
+    width: 100%;
+}
