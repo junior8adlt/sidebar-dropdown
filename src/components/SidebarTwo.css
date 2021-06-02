@@ -1,0 +1,96 @@
+.sidebarTwo {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: #181530;
+  transition: width 200ms ease;
+  padding: 0 0 16px;
+  border-top-right-radius: 10px;
+}
+.sidebarTwo.open {
+  width: 240px;
+}
+.sidebarNavTwo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.sidebarItem {
+  width: 100%;
+  border-top: 1px solid gray;
+}
+
+.sidebarTwoLink {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #727788;
+  text-decoration: none;
+  transition: 600ms;
+}
+.sidebarItem:first-child {
+  border-top: none;
+  margin-top: 0rem;
+}
+.sidebarItem:first-child:hover {
+  background-color: #181530;
+  border-top-right-radius: 10px;
+}
+.sidebarItem:last-child {
+  margin-top: auto;
+}
+.sidebarItem:hover {
+  background-color: #2f2b45;
+}
+.sidebarTwoLink svg {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  font-size: 1rem;
+}
+.sidebarTwo.open .link-text {
+  display: block;
+}
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  font-size: 14px;
+}
+.dropdownIcon {
+  display: none;
+}
+.sidebarTwo.open .dropdownIcon {
+  display: block;
+}
+.sidebarAction {
+  cursor: pointer;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.settings svg {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  color: #727788;
+  cursor: pointer;
+}
+.dropdownLink {
+  width: 100%;
+  background-color: #2f2b45;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 20px;
+  cursor: pointer;
+  justify-content: center;
+}
