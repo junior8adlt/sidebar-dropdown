@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-export const SubMenu = ({ item }) => {
+import {SubNav} from './SubNav';
+export const SubMenu = ({ item, isOpen }) => {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => setSubnav(!subnav);
+  const [submenu, setSubmenu] = useState(false);
+  const showSubMenu = () => setSubmenu(!submenu);
   return (
     <>
      <li className="sidebarItem">
@@ -26,14 +29,20 @@ export const SubMenu = ({ item }) => {
       </NavLink>
      </li>
       {subnav &&
-        item.subNav.map((item, index) => {
+        item.subNav.map((subNavItem) => {
           return (
-            <NavLink to={item.path} key={index} className='dropdownLink' activeClassName='is-active'>
-              {item.icon}
-              <span className="link-text">
-               {item.title}
+            <>
+            <NavLink to={subNavItem.path} key={subNavItem.key} 
+            className={isOpen ? 'dropdownLink' : 'd-none'} 
+            onClick={subNavItem.subMenu && showSubMenu}
+            activeClassName='is-active'>
+              {subNavItem.icon}
+              <span className="dropdown-text">
+               {subNavItem.title}
              </span>
             </NavLink>
+            {submenu && isOpen ? <SubNav item={subNavItem}/> : null}
+            </>
           );
         })}
     </>

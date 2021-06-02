@@ -15,15 +15,15 @@ export const SidebarTwo = () => {
            <nav className={`sidebarTwo ${sidebar ? "open" : ""}`}>
             <ul className="sidebarNavTwo">
             <li className="sidebarItem sidebarAction">
-             <span href="#" className="sidebarTwoLink sidebarActionButton">
+             <span className="sidebarTwoLink sidebarActionButton">
              {sidebar ? (<CgIcons.CgMoveLeft size={30} onClick={showSidebar} />): 
              (<CgIcons.CgMoveRight size={30} onClick={showSidebar} />)}
              <span className={!sidebar ? 'd-none' : ''}><span className="blue-text">ADD</span><span className="white-text">IKA</span></span>
              <IoIcons.IoMdNotificationsOutline size={20} className={!sidebar ? 'd-none' : ''}/>
              </span>
              </li>
-             {SidebarData.map((item, index) => {
-            return <SubMenu item={item} key={index}/>;
+             {SidebarData.map((item) => {
+            return <SubMenu item={item} key={item.key} isOpen={sidebar}/>;
              })}
           <li className="sidebarItem">
               {!sidebar ?
