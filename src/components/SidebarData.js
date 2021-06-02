@@ -15,8 +15,8 @@ export const SidebarData = [
     title: "Reports",
     path: "/reports",
     icon: <IoIcons.IoIosStats />,
-    iconClosed: <FiIcons.FiChevronDown />,
-    iconOpened: <FiIcons.FiChevronUp />,
+    iconClosed: <FiIcons.FiChevronDown size={20} />,
+    iconOpened: <FiIcons.FiChevronUp size={20} />,
     subNav: [
       {
         title: "report1",
