@@ -13,8 +13,7 @@ export const SidebarTwo = () => {
     return (
         <>
            <nav className={`sidebarTwo ${sidebar ? "open" : ""}`}>
-            <ul className="sidebarNavTwo">
-            <li className="sidebarItem sidebarAction">
+           <li className="sidebarItem sidebarAction">
              <span className="sidebarTwoLink sidebarActionButton">
              {sidebar ? (<CgIcons.CgMoveLeft size={30} onClick={showSidebar} />): 
              (<CgIcons.CgMoveRight size={30} onClick={showSidebar} />)}
@@ -22,10 +21,12 @@ export const SidebarTwo = () => {
              <IoIcons.IoMdNotificationsOutline size={20} className={!sidebar ? 'd-none' : ''}/>
              </span>
              </li>
+            <ul className="sidebarNavTwo">
              {SidebarData.map((item) => {
             return <SubMenu item={item} key={item.key} isOpen={sidebar}/>;
              })}
-          <li className="sidebarItem">
+            </ul>
+            <li className="sidebarItem h-100">
               {!sidebar ?
             (<span className="sidebarTwoLink">
             <HiIcons.HiDotsHorizontal/>
@@ -37,7 +38,6 @@ export const SidebarTwo = () => {
             </div>)
             }
              </li>
-            </ul>
            </nav>
         </>
     )
