@@ -14,10 +14,12 @@ export const SidebarTwo = () => {
         <>
            <nav className={`sidebarTwo ${sidebar ? "open" : ""}`}>
             <ul className="sidebarNavTwo">
-            <li className="sidebarItem">
-             <span href="#" className="sidebarTwoLink sidebarAction">
+            <li className="sidebarItem sidebarAction">
+             <span href="#" className="sidebarTwoLink sidebarActionButton">
              {sidebar ? (<CgIcons.CgMoveLeft size={30} onClick={showSidebar} />): 
              (<CgIcons.CgMoveRight size={30} onClick={showSidebar} />)}
+             <span className={!sidebar ? 'd-none' : ''}><span className="blue-text">ADD</span><span className="white-text">IKA</span></span>
+             <IoIcons.IoMdNotificationsOutline size={20} className={!sidebar ? 'd-none' : ''}/>
              </span>
              </li>
              {SidebarData.map((item, index) => {
