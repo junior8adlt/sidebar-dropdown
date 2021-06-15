@@ -34,7 +34,7 @@ export const SidebarData = [
           {
             key: 'INVESTMENT_ACCOUNT',
             title: 'Cuentas de inversión',
-            path: '/cuentas-inversion',
+            path: '/reports/report2/cuentas-inversion',
             icon: null
           },
          

@@ -7,7 +7,7 @@ export const SubNav = ({ item }) => {
         item.subMenu.map((subNavItem) => {
           return (
             <>
-            <NavLink to={subNavItem.path} key={subNavItem.key} className='dropdownLink' 
+            <NavLink to={subNavItem.path} className='dropdownLink' 
             activeClassName='is-active'>
               {subNavItem.icon}
               <span className="dropdown-text">

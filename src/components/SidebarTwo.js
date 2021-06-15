@@ -34,8 +34,8 @@ export const SidebarTwo = () => {
              </span>
              </li>
             <ul className="sidebarNavTwo">
-             {SidebarData.map((item) => {
-            return <SubMenu item={item} key={item.key} isOpen={sidebar}/>;
+             {SidebarData.map((item, index) => {
+            return <SubMenu item={item} key={index} isOpen={sidebar}/>;
              })}
             </ul>
             <li className="sidebarItem h-100">

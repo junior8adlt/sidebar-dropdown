@@ -15,7 +15,7 @@ function App() {
         <Route exact path='/reports' component={Reports} />
         <Route exact path='/reports/report1' component={ReportsOne} />
         <Route exact path='/reports/report2' component={ReportsTwo} />
-        <Route exact path='/cuentas-inversion' component={Investment} />
+        <Route exact path='/reports/report2/cuentas-inversion' component={Investment} />
       </Switch>
     </Router>
   );

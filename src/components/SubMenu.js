@@ -32,7 +32,7 @@ export const SubMenu = ({ item, isOpen }) => {
         item.subNav.map((subNavItem) => {
           return (
             <>
-            <NavLink to={subNavItem.path} key={subNavItem.key} 
+            <NavLink to={subNavItem.path} 
             className={isOpen ? 'dropdownLink' : 'd-none'} 
             onClick={subNavItem.subMenu && showSubMenu}
             activeClassName='is-active'>
